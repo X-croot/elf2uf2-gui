@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.elf2uf2</groupId>
+  <artifactId>elf2uf2-gui</artifactId>
+  <version>1.0.0</version>
+  <name>elf2uf2-gui</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <javafx.version>21.0.2</javafx.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>openjfx-repo</id>
+      <url>https://openjfx.io/maven/</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>${javafx.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-fxml</artifactId>
+      <version>${javafx.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <mainClass>com.elf2uf2.gui.App</mainClass>
+          <commandlineArgs></commandlineArgs>
+          <arguments>
+            <argument>--module-path</argument>
+            <argument>${path.separator}${user.home}/.m2/repository/org/openjfx/javafx-controls/${javafx.version}</argument>
+            <argument>--add-modules</argument>
+            <argument>javafx.controls,javafx.fxml</argument>
+          </arguments>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
