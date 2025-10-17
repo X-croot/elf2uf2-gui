@@ -11,16 +11,26 @@ ELF2UF2 is a JavaFX-based graphical application designed to convert ELF or BIN f
 * Block size defaults to 256 bytes for most RP2040 boards, adjustable via settings.
 <img width="1086" height="802" alt="screenshot" src="https://github.com/user-attachments/assets/a5da43b4-39c2-4c79-a1f3-b6a9f892b023" />
 
-## Installation
+## Build and Run from Source
 
-Download the latest release from the [Releases page](https://github.com/X-croot/elf2uf2-gui/releases).
+You can also build and run ELF2UF2 from source directly:
 
-1. **Download** the latest ELF2UF2 release JAR from the Releases section.
-2. **Run** the JAR file with Java 17 or higher:
+**Clone the repository:**
 
-   ```bash
-   java -jar elf2uf2-gui.jar
-   ```
+```bash
+git clone https://github.com/X-croot/elf2uf2-gui.git
+cd elf2uf2-gui
+```
+
+
+**Run the application:**
+
+```bash
+mvn javafx:run
+```
+
+> **Requirements:** Java 17 or higher, Maven installed.
+
 
 
 ## Usage
