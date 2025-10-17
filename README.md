@@ -20,12 +20,14 @@ You can also build and run ELF2UF2 from source directly:
 ```bash
 git clone https://github.com/X-croot/elf2uf2-gui.git
 cd elf2uf2-gui
+
 ```
 
 
 **Run the application:**
 
 ```bash
+mvn dependency:resolve
 mvn javafx:run
 ```
 
